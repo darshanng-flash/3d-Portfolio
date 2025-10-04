@@ -10,7 +10,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Next.js recommended + TypeScript rules (converted from legacy to flat)
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Project-level options
   {
     ignores: [
       "node_modules/**",
@@ -19,6 +22,10 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+    },
   },
 ];
 

@@ -27,7 +27,8 @@ export default function AnimatedName() {
   }, [])
 
   const showHome = mounted && pathname === '/'
-  if (!showHome) return null
+if (!showHome) return null
+
 
   const letters = Array.from('DARSHAN N G').map((ch) => (ch === ' ' ? '\u00A0' : ch))
 
